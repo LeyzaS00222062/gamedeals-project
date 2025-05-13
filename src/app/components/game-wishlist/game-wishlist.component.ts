@@ -16,12 +16,19 @@ export class GameWishlistComponent implements OnInit {
   constructor(private wishListService: GameWishlistService){}
 
   ngOnInit(): void {
-    this.wishList = this.wishListService.getWishList();
+    this.refreshWishlist;
   }
 
   remove(gameID: string){
-    this.wishListService.removeFromWishList(gameID);
-    this.wishList = this.wishListService.getWishList();
+    this.wishListService.removeFromWishList(gameID).subscribe(() => {
+      this.refreshWishlist();
+    });
+  }
+
+  refreshWishlist(){
+    this.wishListService.getWishList().subscribe(data => {
+      this.wishList = data;
+    });
   }
 
 }

@@ -1,6 +1,6 @@
 <div class="container">
-  <input (ngModel)="query" placeholder="Search games..." />
-  <button (click)="search()">Search</button>
+  <input *ngIf="query != null" placeholder="Search games..." />
+  <button (click)="search()">Search for Deals</button>
 </div>
 
 <div *ngIf="games.length > 0">
