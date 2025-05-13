@@ -1,0 +1,15 @@
+<div class="container">
+  <input (ngModel)="query" placeholder="Search games..." />
+  <button (click)="search()">Search</button>
+</div>
+
+<div *ngIf="games.length > 0">
+  <div *ngFor="let game of games" class="game-card">
+    <img src="game.thumb" alt="{{ game.external }}" />
+    <div>
+      <h3>{{ game.external }}</h3>
+      <p>Cheapest Price: ${{ game.cheapest }}</p>
+      <button (click)="addToWishList(game)">Add to your WishList</button>
+    </div>
+  </div>
+</div>

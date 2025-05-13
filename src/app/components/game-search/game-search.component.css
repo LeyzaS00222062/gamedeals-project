@@ -1,0 +1,14 @@
+.search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.game-card {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  padding: 10px;
+  align-items: center;
+}

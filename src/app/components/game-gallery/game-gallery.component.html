@@ -1,0 +1,11 @@
+<h2>🔥 Most Popular Games</h2>
+<div class="gallery-grid">
+  <div *ngFor="let game of popularGames" class="gallery-card">
+    <img [src]="game.thumb" alt="{{ game.title }}" />
+    <div class="info">
+      <h3>{{ game.title }}</h3>
+      <p>Sale Price: ${{ game.salePrice }}</p>
+      <p>Normal Price: <s>${{ game.normalPrice }}</s></p>
+    </div>
+  </div>
+</div>
