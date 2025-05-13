@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { GameService } from '../../services/game.service';
 import { GameWishlistService } from '../../services/game-wishlist.service';
 import { Game } from '../../models/game.models';
 
 @Component({
   selector: 'app-game-search',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './game-search.component.html',
   styleUrl: './game-search.component.css'
 })
