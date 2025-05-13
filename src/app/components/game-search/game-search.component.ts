@@ -12,6 +12,7 @@ import { Game } from '../../models/game.models';
 })
 export class GameSearchComponent {
   query = '';
+  
   games: any[]=[];
 
   constructor(
