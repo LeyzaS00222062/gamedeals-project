@@ -3,12 +3,15 @@ import { CommonModule } from '@angular/common';
 import { GameService } from '../../services/game.service';
 import { GameWishlistService } from '../../services/game-wishlist.service';
 import { Game } from '../../models/game.models';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-game-search',
-  imports: [CommonModule],
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './game-search.component.html',
-  styleUrl: './game-search.component.css'
+  styleUrls: ['./game-search.component.css']
 })
 export class GameSearchComponent {
   query = '';

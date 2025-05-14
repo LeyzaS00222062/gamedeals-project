@@ -25,7 +25,7 @@ export class GameWishlistService {
 
   removeFromWishList(gameID: string): Observable<void> {
     this._wishlist = this._wishlist.filter(game => game.gameID !== gameID);
-    return this.http.delete<void>('${this._apiUrl}/${gameID}')
+    return this.http.delete<void>(`${this._apiUrl}/${gameID}`);
   }
 
 }

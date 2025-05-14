@@ -1,16 +1,16 @@
-import { NgModel } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";  
-
 import { FormsModule } from "@angular/forms";
+import {provideHttpClient } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { NgModel } from "@angular/forms";
 
-import { AppComponent } from "./app.component";
-import { GameSearchComponent } from "./components/game-search/game-search.component";
-import { NgModule, NgModuleRef } from "@angular/core";
+
 
 @NgModule({
     declarations:[],
-    imports: [BrowserModule, FormsModule, AppComponent, GameSearchComponent],
-    providers: [],
+    imports: [BrowserModule, FormsModule],
+    providers: [provideHttpClient(), HttpClient, NgModel],
     bootstrap:[],
 })
 

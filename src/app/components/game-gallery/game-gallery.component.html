@@ -1,4 +1,18 @@
 <div class="container-fluid">
   <h2>🔥 Most Popular Games</h2>
-    
+    <div class="container-fluid">
+      <div class="gallery-grid" style="padding: 2em;">
+          <div *ngFor="let game of popularGames" class="card"  >
+        <img src="{{game.thumb}}" alt="{{game.title}}" class="card-img-top"/>
+        <div class="card-body" style="padding: 1em; max-height: 20rem;">
+          <h3 class="card-title">{{ game.title }}</h3>
+          <p class="card-text">Sale Price: ${{game.salePrice}}</p>
+          <p card="card-text">Normal Price: <s>${{game.normalPrice}}</s></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+

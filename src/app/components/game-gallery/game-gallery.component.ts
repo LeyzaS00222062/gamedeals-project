@@ -4,9 +4,10 @@ import { GameService } from '../../services/game.service';
 
 @Component({
   selector: 'app-game-gallery',
+  standalone:true,
   imports: [CommonModule],
   templateUrl: './game-gallery.component.html',
-  styleUrl: './game-gallery.component.css'
+  styleUrls: ['./game-gallery.component.css']
 })
 export class GameGalleryComponent implements OnInit{
 

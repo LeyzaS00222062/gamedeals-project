@@ -1,2 +1,18 @@
-<h2>Wish List</h2>
+<div class="container-fluid">
+    <h2>Wish List</h2>
+    <div class="container-fluid">
+        <div *ngIf="wishList.length === 0">Your wish list is empty.
+                <br>
+        </div>
+        <div *ngFor="let game of wishList" class="game-card">
+            <img src="{{game.thumb}}" alt="{{ game.external }}" />
+            <div>
+                <h3>{{ game.external }}</h3>
+                <p>Price: ${{ game.cheapest }}</p>
+                <button (click)="remove(game.gameID)">Remove</button>
+            </div> 
+        </div>
+    </div>
+</div>
+
 
