@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <h2>Search your Deals!</h2>
     <div class="container-fluid">
-      <input  [(ngModel)]="query" type="text" placeholder="Search games..." />
-      <button (click)="search()" type="submit" class="btn btn-primary">Search for Deals</button>
+      <input  [(ngModel)]="query" type="text" placeholder="Search games..." style="padding-right: 5em ; margin-right: 2em;"/>
+      <button (click)="search()" type="submit" class="btn btn-primary bg-info btn-info">Search for Deals</button>
     </div>
 <div *ngIf="games.length > 0">
   <div *ngFor="let game of games" class="game-card">
